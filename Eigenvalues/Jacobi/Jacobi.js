@@ -73,10 +73,10 @@ const getPQ = (M) => {
 
 const getCS = (p, q, M) => {
   const µ = (M[q][q] - M[p][p]) / (2 * M[p][q]);
-  const t = Math.sqrt(µ**2 + 1) - µ;
+  const t = -Math.sqrt(µ**2 + 1) - µ;
 
-  const c = (1 - t**2) / (1 + t**2);
-  const s = (2 * t) / ( 1 + t**2);
+  const c = 1 / Math.sqrt(1 + t**2);
+  const s =  t / Math.sqrt( 1 + t**2);
   
   return [c, s]
 }
