@@ -1,1 +1,1 @@
-# deep-math
+# math-methods
