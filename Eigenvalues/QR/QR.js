@@ -1,5 +1,15 @@
+const transpose = (M) => {
+  const B = new Array(M.length).fill(0).map(() => new Array(M.length).fill(0));
+  for(let i=0; i<M.length; i++){
+    for(let j=0; j<M.length; j++){
+      B[j][i] = M[i][j]
+    }
+  }
+  return B
+}
+
 const matrixDot = (M, N) => {
-  var result = new Array(M.length).fill(0).map(row => new Array(N[0].length).fill(0));
+  var result = new Array(M.length).fill(0).map(() => new Array(N[0].length).fill(0));
   return result.map((row, i) => {
     return row.map((val, j) => {
       return M[i].reduce((sum, elm, k) => sum + (elm*N[k][j]) ,0)
@@ -35,4 +45,33 @@ const pad = (H, dim) => {
   }
 
   return result
+}
+
+const QR = (A) => {
+	const n = A.length
+	const m = A[0].length
+	const holderMatrices = []
+	let R = JSON.parse(JSON.stringify(A))
+	for(let j=0; j<m-1; j++){
+		const v = []
+		R.forEach((row, index) => {
+			if(index >= j){
+				v.push(row[j])
+			}
+		})
+		let H = getH(v)
+		H = pad(H, n)
+		R = matrixDot(H, R)
+		holderMatrices.push(H)
+	}
+
+	let Q = transpose(holderMatrices[holderMatrices.length - 1])
+	for (let i = holderMatrices.length - 2; i >= 0; i--) {
+		Q = matrixDot(transpose(holderMatrices[i]), Q)
+	}
+
+	return {
+		Q,
+		R
+	}
 }
