@@ -1,4 +1,7 @@
 # Eigenvalue
 
 ## Methods
-### Jacobi
+
+### [Jacobi](./Jacobi)
+
+### [QR](./QR)
