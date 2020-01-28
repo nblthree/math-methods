@@ -1,0 +1,38 @@
+{
+  "name": "math-methods",
+  "version": "1.0.0",
+  "description": "Mathematical Methods",
+  "main": "index.js",
+  "repository": "https://github.com/MarchWorks/math-methods",
+  "author": "MarchWorks <edel.f.wool@gmail.com>",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**"
+    ],
+    "globals": [
+      "performance"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.3",
+    "prettier": "^1.19.1",
+    "standard": "^14.3.1"
+  }
+}
