@@ -14,8 +14,7 @@
   "lint-staged": {
     "*.js": [
       "prettier --write",
-      "standard --fix",
-      "git add"
+      "standard --fix"
     ]
   },
   "standard": {
