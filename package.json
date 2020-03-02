@@ -2,10 +2,34 @@
   "name": "math-methods",
   "version": "1.0.0",
   "description": "Mathematical Methods",
-  "main": "index.js",
-  "repository": "https://github.com/MarchWorks/math-methods",
-  "author": "MarchWorks <edel.f.wool@gmail.com>",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "jest",
+    "prepare": "npm run build",
+    "trypublish": "npm publish || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarchWorks/math-methods"
+  },
+  "author": "Nabil Boussouf <edel.f.wool@gmail.com> (https://github.com/MarchWorks)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarchWorks/math-methods/issues"
+  },
+  "homepage": "https://github.com/MarchWorks/math-methods",
+  "keywords": [
+    "math",
+    "numerical-methods",
+    "optimization-methods",
+    "gradient-descent",
+    "optimization",
+    "mathematics",
+    "eigenvalues",
+    "qr-decomposition",
+    "jacobi-eigenvalues"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -33,5 +57,11 @@
     "lint-staged": "^10.0.3",
     "prettier": "^1.19.1",
     "standard": "^14.3.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/scripts/testMock.js",
+      "\\.(css|less)$": "<rootDir>/scripts/testMock.js"
+    }
   }
 }
