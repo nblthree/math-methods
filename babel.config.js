@@ -4,9 +4,13 @@ module.exports = {
     [
       'minify',
       {
-        keepFnName: true
+        keepFnName: true,
+        builtIns: false
       }
     ]
   ],
-  plugins: [['@babel/plugin-proposal-class-properties']]
+  plugins: [
+    ['@babel/plugin-proposal-class-properties'],
+    ['@babel/plugin-proposal-export-default-from']
+  ]
 }

@@ -1,7 +1,7 @@
-import { jabobi, qr } from './Eigenvalues'
+import { jacobi, qr } from './Eigenvalues'
 
 const mathMethods = {
-  jabobi,
+  jacobi,
   qr
 }
 

@@ -44,19 +44,32 @@
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "**/build/**"
     ],
     "globals": [
       "performance"
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
     "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-minify": "^0.5.1",
     "eslint": "^6.8.0",
     "husky": "^4.2.1",
+    "jest": "^25.1.0",
     "lint-staged": "^10.0.3",
     "prettier": "^1.19.1",
-    "standard": "^14.3.1"
+    "prettier-webpack-plugin": "^1.2.0",
+    "standard": "^14.3.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   },
   "jest": {
     "moduleNameMapper": {
