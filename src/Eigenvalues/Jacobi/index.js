@@ -51,7 +51,7 @@ const getCS = (p, q, M) => {
   return [c, s]
 }
 
-export default function jacobi (matrix, epsilon = 10 ** 4 * Number.EPSILON) {
+export default function jacobi (matrix, epsilon = 10 ** 9 * Number.EPSILON) {
   let step = 0
   let v = Number.MAX_SAFE_INTEGER
   while (Math.abs(v) > epsilon) {
