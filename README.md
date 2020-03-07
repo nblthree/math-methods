@@ -5,11 +5,11 @@
 ## Getting Started
 
 ```
-npm install math-methods
+npm install @marchworks/math-methods
 ```
 Or if you are using yarn
 ```
-yarn add math-methods
+yarn add @marchworks/math-methods
 ```
 
 ## Methods

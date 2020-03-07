@@ -1,5 +1,5 @@
 {
-  "name": "math-methods",
+  "name": "@marchworks/math-methods",
   "version": "1.0.0",
   "description": "Mathematical Methods",
   "main": "build/index.js",
