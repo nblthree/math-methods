@@ -18,6 +18,7 @@
   "bugs": {
     "url": "https://github.com/MarchWorks/math-methods/issues"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "homepage": "https://github.com/MarchWorks/math-methods",
   "keywords": [
     "math",
